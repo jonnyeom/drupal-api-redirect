@@ -1,0 +1,22 @@
+{
+  "name": "Drupal API Redirect",
+  "description": "Ensure Drupal API pages load the configured version",
+  "version": "1.0",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "manifest_version": 2,
+  "background": {"scripts":["background.js"]},
+  "icons": {
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://api.drupal.org/*",
+    "*://www.api.drupal.org/*"
+  ]
+}
