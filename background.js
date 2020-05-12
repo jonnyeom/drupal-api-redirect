@@ -28,9 +28,10 @@ chrome.webRequest.onBeforeRequest.addListener(
     }
   },
   {
+    // Lets allow the /api/drupal/8.x.x pages.
     urls: [
-      "*://api.drupal.org/api/drupal/*.x",
-      "*://www.api.drupal.org/api/drupal/*.x",
+      "*://api.drupal.org/api/drupal/*/*.x",
+      "*://www.api.drupal.org/api/drupal/*/*.x",
     ],
     types: [
       "main_frame",
